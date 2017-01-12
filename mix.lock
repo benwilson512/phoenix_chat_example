@@ -1,4 +1,4 @@
-%{"absinthe": {:git, "https://github.com/absinthe-graphql/absinthe.git", "7593fde8cf94e3a29f30d66582314bd1d2fdab2b", [branch: "subscriptions"]},
+%{"absinthe": {:git, "https://github.com/absinthe-graphql/absinthe.git", "4b1531100e8c2433c3b83b0cf4974c1ae46f9d19", [branch: "subscriptions"]},
   "absinthe_plug": {:hex, :absinthe_plug, "1.2.0", "5cccb5ee6bb26ab7e0e9285731db1d1ac30864a7217fb1a76b6a3edb3070af4a", [:mix], [{:absinthe, "~> 1.2.0", [hex: :absinthe, optional: false]}, {:plug, "~> 1.0", [hex: :plug, optional: false]}]},
   "connection": {:hex, :connection, "1.0.4", "a1cae72211f0eef17705aaededacac3eb30e6625b04a6117c1b2db6ace7d5976", [:mix], []},
   "cowboy": {:hex, :cowboy, "1.0.4", "a324a8df9f2316c833a470d918aaf73ae894278b8aa6226ce7a9bf699388f878", [:make, :rebar], [{:cowlib, "~> 1.0.0", [hex: :cowlib, optional: false]}, {:ranch, "~> 1.0", [hex: :ranch, optional: false]}]},
