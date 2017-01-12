@@ -1,6 +1,8 @@
 defmodule Chat.Schema do
   use Absinthe.Schema
 
+  def pubsub, do: Chat.Endpoint
+
   object :user do
     field :name, :string
   end
