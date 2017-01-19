@@ -3,6 +3,7 @@ defmodule Chat.UserSocket do
 
   channel "rooms:*", Chat.RoomChannel
   channel "__absinthe__:*", Absinthe.Phoenix.Channel
+  channel "graphql", Chat.GraphQLChannel
 
   transport :websocket, Phoenix.Transports.WebSocket
   transport :longpoll, Phoenix.Transports.LongPoll

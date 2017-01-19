@@ -7,6 +7,7 @@ defmodule Chat.Mixfile do
      elixir: "~> 1.0",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix] ++ Mix.compilers,
+     aliases: aliases(),
      deps: deps()]
   end
 
@@ -18,7 +19,7 @@ defmodule Chat.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {Chat, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger, :postgrex]]
+     applications: [:phoenix, :phoenix_html, :cowboy, :logger, :phoenix_ecto, :postgrex]]
   end
 
   # Specifies your project dependencies
@@ -28,11 +29,16 @@ defmodule Chat.Mixfile do
     [{:phoenix, "1.2.1"},
      {:poison, "3.0.0", override: true},
      {:phoenix_pubsub, ">= 0.0.0"},
+     {:phoenix_ecto, "~> 3.0"},
      {:phoenix_html, "~> 2.5"},
      {:absinthe, github: "absinthe-graphql/absinthe", branch: "subscriptions", override: true},
      {:absinthe_plug, ">= 0.0.0"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:postgrex, "~> 0.12.1"},
      {:cowboy, "~> 1.0"}]
+  end
+
+  defp aliases do
+    ["test": ["ecto.create --quiet", "ecto.migrate", "test"]]
   end
 end
