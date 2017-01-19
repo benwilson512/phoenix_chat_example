@@ -23,5 +23,13 @@ config :chat, Chat.Endpoint,
     ]
   ]
 
+config :chat, Chat.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "chat_dev",
+  hostname: "localhost",
+  pool_size: 10
+
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

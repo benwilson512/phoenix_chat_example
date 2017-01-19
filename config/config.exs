@@ -5,6 +5,9 @@
 # is restricted to this project.
 use Mix.Config
 
+config :chat,
+  ecto_repos: [Chat.Repo]
+
 # Configures the endpoint
 config :chat, Chat.Endpoint,
   url: [host: "localhost"],

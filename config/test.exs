@@ -6,5 +6,13 @@ config :chat, Chat.Endpoint,
   http: [port: 4001],
   server: false
 
+config :chat, Chat.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "chat_test",
+  hostname: "localhost",
+  pool: Ecto.Adapters.SQL.Sandbox
+
 # Print only warnings and errors during test
 config :logger, level: :warn
